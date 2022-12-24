@@ -256,7 +256,7 @@ namespace R5T.F0074
 		}
 
 		/// <summary>
-		/// Chooses <see cref="UploadFile_WithOverwrite(AmazonS3Client, S3BucketName, S3ObjectKey, Stream)"/> as the default.
+		/// Chooses <see cref="UploadFile_WithOverwrite(AmazonS3Client, S3BucketName, S3ObjectKey, string)"/> as the default.
 		/// </summary>
 		public async Task UploadFile(
 			AmazonS3Client client,

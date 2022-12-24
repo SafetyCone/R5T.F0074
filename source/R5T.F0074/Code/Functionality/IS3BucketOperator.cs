@@ -167,7 +167,7 @@ namespace R5T.F0074
 
 		/// <summary>
 		/// Determines if a bucket exists for anyone in the world.
-		/// This is usually *not* what you mean when when you want to know whether a bucket exists (does the bucket exist for *you*, not whether the bucket exists globally for anyone), so also see <see cref="IS3BucketOperator.DoesBucketExistForClientOwner(AmazonS3Client, S3BucketName)(AmazonS3Client, S3BucketName)"/>.
+		/// This is usually *not* what you mean when when you want to know whether a bucket exists (does the bucket exist for *you*, not whether the bucket exists globally for anyone), so also see <see cref="IS3BucketOperator.DoesBucketExistForClientOwner(AmazonS3Client, S3BucketName)"/>.
 		/// <inheritdoc cref="Documentation.BucketNamesAreGloballyUnique" path="/summary"/>
 		/// </summary>
 		public async Task<bool> DoesBucketExistGlobally(
@@ -177,8 +177,6 @@ namespace R5T.F0074
 			var bucketExistsGlobally = await AmazonS3Util.DoesS3BucketExistV2Async(client, bucketName);
 			return bucketExistsGlobally;
 		}
-
-		
 
 		/// <summary>
 		/// Determines whether a bucket exists by name for the owner specified by the S3 client.
